@@ -5,6 +5,36 @@
   </head>
   <body>
     <main>
+      <form id="post-form" onsubmit="createPost()">
+        <label for="post-title">Title:</label> <input type="text" id="post-title"><br>
+        <label for="post-body">Body:</label><br>
+        <textarea id="post-body" rows="8" cols="80"></textarea>
+      </form>
+      <script id="page-template" type="text/x-lodash-template">
+        <div id="sidebar">
+
+        </div>
+        <div id="post">
+
+        </div>
+      </script>
+      <script id="post-template" type="text/x-lodash-template">
+      <article>
+        <header>
+        </header>
+        <footer></footer>
+      </article>
+      </script>
+      <script id="comments-template" type="text/x-lodash-template">
+        <div id="comments">
+          <form onsubmit="postComment()">
+
+          </form>
+        </div>
+      </script>
+      <script id="comment-template" type="text/x-lodash-template">
+      <footer></footer>
+      </script>
     </main>
     <script src="node_modules/lodash/lodash.min.js"></script>
     <script src="index.js"></script>
